@@ -1,5 +1,10 @@
 public class JavaL1 {
     public static void main(String[] args) {
+      /*
+      Javaプログラミングの初歩から学びます。 
+      基本的な出力方法、データ型、変数の操作を通じて、効率的なコード記述の基礎を築きます。
+      */
+      
       // 文字列"Hello World"を出力              「//」でコメントを記述
       System.out.println("Hello World");
       // 文字列"Hello! World!"を出力
