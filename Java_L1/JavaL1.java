@@ -145,13 +145,6 @@ public class JavaL1 {
       int score = 78;
       String Grades = subject + "：" + score;
       System.out.println(Grades);
-
-      //論理積(&&)を使った判定結果を出力
-      System.out.println(true && true);
-      //論理和(||)を使った判定結果を出力
-      System.out.println(false || false);
-      //論理否定(!)を使った判定結果を出力
-      System.out.println(!false);
       
     }
   }
