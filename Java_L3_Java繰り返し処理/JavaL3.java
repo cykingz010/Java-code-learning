@@ -93,6 +93,56 @@ public class JavaL3 {
       }
     }
 
+    int count = 0;
+    //while文を使って"Hello World"をコンソールに3回出力して
+    count = 0;
+    while (count < 3) {
+      System.out.println("Hello World");
+      count++;
+    }
+
+    //do while文を使って"Hello World"をコンソールに3回出力して
+    count = 0;
+    do {
+      System.out.println("Hello World");
+      count++;
+    } while (count < 3);
+
+
+    //while文を使って1から10まで足し算した値を、コンソールに出力して
+    int sum3 = 0;
+    int i = 1;
+    while (i <= 10) {
+      sum3 += i;
+      i++;
+    }
+    System.out.println("合計値: " + sum3);
+
+    //while文を使って1から10までの奇数のみ足し算した値を、コンソールに出力して
+    int sum4 = 0;
+    int j = 1;
+    while (j <= 10) {
+      if (j % 2 != 0) {
+        sum4 += j;
+      }
+      j++;
+    }
+    System.out.println("奇数の合計値: " + sum4);
+  
+
+    //while文を使って1から10までの奇数のみ足し算し、足し算した値が2の倍数の時のみ”XXは2の倍数です”をコンソールに出力して
+    int sum5 = 0;
+    int k = 1;
+    while (k <= 10) {
+      if (k % 2 != 0) {
+        sum5 += k;
+        if (sum5 % 2 == 0) {
+          System.out.println(sum5 + "は2の倍数です");
+        }
+      }
+      k++;
+    }
+    System.out.println("合計値: " + sum5);
 
     }
   }
