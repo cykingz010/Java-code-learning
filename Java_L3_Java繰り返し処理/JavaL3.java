@@ -144,6 +144,64 @@ public class JavaL3 {
     }
     System.out.println("合計値: " + sum5);
 
+
+    /* while文のループ制御 : while break continue */
+    int continueNum = 1;
+    int breakNum = 1;
+    //while文とcontinue文を使って1から5までの奇数のみコンソール出力してみよう
+    while (continueNum <= 5) {
+      if (continueNum % 2 == 0) {
+        continueNum++;
+        continue;
+      }
+      System.out.println("番号: " + continueNum);
+      continueNum++;
+    }
+    //5回処理を繰り返すwhile文にbreak文を追加し、3回目の処理でループ終了させてみよう
+    while (breakNum <= 5) {
+      if (breakNum == 3) {       //3回目の処理でループ終了
+        System.out.println("処理: " + breakNum);
+        break; 
+      }
+      System.out.println("処理: " + breakNum);
+      breakNum++;
+    }
+
+    //問題の条件を満たす処理をwhile文を使って実装してみよう
+    System.out.println("下記の条件を満たす処理をwhile文を使って実装してみよう");
+    System.out.println("1から10まで繰り返すwhile文の中に、1から5まで繰り返すwhile文を記述");
+    System.out.println("外のループ回数と中のループ回数を掛け算した値をコンソール出力");
+    System.out.println("掛け算した値が3の倍数の時に3の倍数ですをコンソール出力");
+    System.out.println("掛け算した値が5の倍数の時に5の倍数ですをコンソール出力");
+    System.out.println("掛け算した値が3の倍数、かつ5の倍数の時はcontinue文で処理をSKIP（何もコンソール出力しない）");
+    int outer = 1;
+    while (outer <= 10) {
+      int inner = 1;    // 每次大循环里，最开始是内循环的inner在循环（inner ++ ）
+                        // 每次外循环更新（outer++）后，inner重新被 int inner = 1
+      while (inner <= 5) {
+        int result = outer * inner;     //每一次乘算
+        System.out.println(outer + "*" + inner + "掛け算結果: " + result);
+
+        if (result % 3 == 0 && result % 5 == 0) {
+          inner++;  //如果是15倍数 ,inner++ 不输出  ——  如果这里不做inner++ ，会导致inner=5无限触发 3x5=15
+          continue;  //跳过内循环
+        }
+
+        if (result % 3 == 0) {      //如果是3倍数 输出
+          System.out.println(result + "は3の倍数です");
+        }
+
+        if (result % 5 == 0) {      //如果是5倍数 输出
+          System.out.println(result + "は5の倍数です");
+        }
+
+        inner++;  //一次内循环结束 重复直到inner变成6 
+      }
+      outer++;  //inner=6后，跳出内循环， 外循环的outer++
+    }
+
+
+
     }
   }
   
