@@ -77,7 +77,7 @@ public class JavaL3 {
     for (int i = 1; i <= 10; i++) {
       for (int j = 1; j <= 5; j++) {
         int result = i * j;
-        System.out.println("掛け算結果: " + result);
+        System.out.println(i + "*" + j + "掛け算結果: " + result);
 
         if (result % 3 == 0 && result % 5 == 0) {
           continue;
@@ -184,6 +184,7 @@ public class JavaL3 {
 
         if (result % 3 == 0 && result % 5 == 0) {
           inner++;  //如果是15倍数 ,inner++ 不输出  ——  如果这里不做inner++ ，会导致inner=5无限触发 3x5=15
+          //回忆一下上面的代码（这道题有for循环的版本）， 因为for循环里有++，while是没有的，所以这里我们做了++处理
           continue;  //跳过内循环
         }
 
