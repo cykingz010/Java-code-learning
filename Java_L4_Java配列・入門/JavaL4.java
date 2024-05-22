@@ -72,8 +72,41 @@ public class JavaL4 {
       System.out.println(number);
     }
 
-
+    //int型の2次元配列gridを2行3列で宣言してください
+    int[][] grid = new int[2][3];
+    //int型の2次元配列scoresに要素80,85と75,95を指定して代入してください
+    int[][] scores = { { 80, 85 }, { 75, 95 } };
     
+
+    //2次元配列の要素を繰り返し処理で出力してください
+    System.out.println("2次元配列の要素を繰り返し処理で出力してください");
+    int[][] score = { { 92, 80, 100 }, { 64, 90, 20 } };
+    //2次元配列scoreの要素を繰り返し処理で出力してください
+    for (int i = 0; i < score.length; i++) {
+      for (int j = 0; j < score[i].length; j++) {       
+        //for (int j = 0; j < score.length; j++)  不行吗？
+        //不可以，内循环需要比较的不是大数组的长度，是内部的小数组长度，假如大数组长度=2，小数组长度=3 ，那么无法打印完全
+        System.out.println(score[i][j] + " ");
+      }
+    System.out.println();
+    }
+
+    //2次元配列の要素取得
+    int[][] score2 = {
+      { 80, 90, 65, 78, 92 }, // Aクラス
+      { 60, 70, 59, 60, 98 }, // Bクラス
+      { 72, 80, 49, 72, 89 } // Cクラス
+    };
+    for (int i = 0; i < score2.length; i++) {
+      int result = 0;
+      for (int j = 0; j < score2[i].length; j++) {   //上記のfor文にネストして、カウンタ変数をj、配列score[i]の要素数分繰り返し処理を行うfor文を実装
+        result += score2[i][j];  //変数resultに配列score[i][j]を加算する処理を実装
+        System.out.println( "sum：" + result);
+      }
+      System.out.println("クラスの平均点: " + result / score2[i].length);//変数resultに配列score[i]の要素数分、割り算して
+    }
+
+
 
     }
   }
