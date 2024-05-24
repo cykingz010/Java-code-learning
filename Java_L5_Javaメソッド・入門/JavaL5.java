@@ -62,10 +62,9 @@ public class JavaL5 {
 
       //定義したメソッドを使って「問題3: 」と「奇数です。」を結合して出力して
       System.out.println("問題3: " + evenOddDecision(21));
+
+
     }
-
-
-
   }
 
   
