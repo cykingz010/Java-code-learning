@@ -3,17 +3,21 @@ public class JavaL_Oracle2 {
     public static void main(String[] args) {
 
       int array = new int[10];
+      // 声明空数组两种写法 
+      // int[] a = new int[0];   必须要有数字不能为空
+      // int[] b = new int[]{ };
+
       System.out.println(array);  // 错误的，java不能用print 打印数组
      //方法System.out.println()通过调用String.valueOf()把入参对象转换为一个字符串。 
      //如果我们查看  String.valueOf()  方法的实现，会看到如下的代码：
      // return (obj == null) ? "null" : obj.toString();
      
-     int[] a;
-     int b[];
-     int [][]c;
-     int d[][];
-     int[] e[];
-     int[][] f[];  //为什么都是对的？/*  */
+     int[] a;  //数组正常写法  []在数据类型后面
+     int b[];  //b[]看上去是一个变量名   不过C语言里，数组就是这么定义的 int a[]，所以这种写法也是对的
+     int [][]c; //正常写法 
+     int d[][]; //和int b[][]一个样子 也是对的
+     int[] e[];  // 其实是 int[][] e 或者 int e[][]
+     int[][] f[];  //其实是 int[][][]f   或者int f[][][]
  
       String[] array = {"A","B","C","D"};
      array[0] = null;        // 因为 A = null , 所以之后输出的时候 Null  B  C  D
@@ -53,7 +57,6 @@ public class JavaL_Oracle2 {
      for (int i = 0; i < array.length; i++){        //外层循环遍历数组的每一行。
        for (int j = i; j< array[i].length; j++){    //内层循环遍历每一行的部分元素。
          //关键在于j = i，即内层循环的起始索引是外层循环的索引i。array[i].length返回当前行的元素个数。
- 
          //System.out.println("total:" + total);
          total += array[i][j];
          //System.out.println("taotal加算:" +total);
@@ -79,8 +82,11 @@ public class JavaL_Oracle2 {
       // i=1 total= 0+j =1 ， j++ ， j=2
       // i=1 total= 1+2 = 3  j++ j=3
       // i=1 total=3+3=6   j++ j=4
-      //i=1 j=4>3  b循环中断结束 返回a循环
-      // b循环已经被break了，a循环继续做也不会做b循环了
+      //i=1 j=4>3  b循环中断结束 返回a循环, a循环执行结束了，i++   i=2
+      // i=2, 2%2==0  不做了 i=3
+      //i=3 3%2==1 ，做内循环，继续加6total =12
+      //i=4 不做  i++ i=5,
+      //循环结束
     
 
 
