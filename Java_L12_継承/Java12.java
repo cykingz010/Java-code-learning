@@ -22,10 +22,31 @@ class Circle extends Shape {
 
 class Car extends Vehicle {
   public Car() {
-    // スーパークラスのコンストラクタを呼び出してください
-    super("トヨタの車");
+    // Carクラスのコンストラクタでスーパークラスのコンストラクタに"トヨタの車"を渡して呼び出してみよう
+    super("トヨタの車");  
   }
 }
+
+/**
+ * 犬クラス 動物クラスを拡張し、新しい機能を追加します。
+ * Petクラスを継承したDogクラスに新たなメソッドを追加しましょう
+ * @see Pet
+ */
+class Dog extends Pet {
+
+  public Dog(String name) {   //子类Dog的结构体？
+    // Dogクラスでスーパークラスのコンストラクタの引数に"ポチ"を渡して呼び出してみよう
+    super("ポチ");    
+    
+  }
+
+  // サブクラスにメソッドを定義してください  子类的方法
+  void walkAndBark() {
+    super.walk(super.name); //super.メソッド名でスーパークラスのメソッドを呼び出しましょう
+    System.out.println(name + "吠える"); //"吠える"と出力しよう
+  }
+}
+
 
     public class Java12 {         
       public static void main(String[] args) {
@@ -37,6 +58,16 @@ class Car extends Vehicle {
       circle.getPi();
 
       circle.callSuper(); //callSuperメソッドを使用
+
+      // 作成したクラスCarのインスタンスcarを生成してください
+      Car car = new Car();
+
+      // インスタンスを生成し、定義したメソッドを使用してください
+      Dog dog = new Dog("ポチ"); //为啥这里不需要加"ポチ" —— Dog类的（）里没设置引数？
+      dog.walkAndBark();    
+      //如果，如果这里我想让walk函数输出 name+歩く，那我需要在pet.java里 public void walk(String name) {}
+      //但这样的话，super.walk();就必须加上name了吧，必须加上super.walk(“ポチ”);
+
       }
     }
     
