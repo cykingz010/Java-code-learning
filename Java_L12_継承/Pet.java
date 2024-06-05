@@ -22,5 +22,9 @@ public class Pet {
         this.name = name;
       System.out.println(name + "歩く");
     }
+
+    public void introduction(String name) {
+      System.out.println(name + "です。");
+    }
   }
   

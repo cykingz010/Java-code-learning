@@ -12,7 +12,13 @@ class Carrot extends Vegetable{
 class Circle extends Shape {
   void getPi() {
     System.out.println("円周率は3.14です。");
+
   }
+  // スーパークラスのメソッドをオーバーライドしてみよう
+  @Override
+  public void description() {
+  System.out.println("円についてのクラスです。");
+}
   
   public void callSuper() {
     // Circleクラスからスーパークラスのdescriptionメソッドを呼び出してみよう
@@ -45,8 +51,31 @@ class Dog extends Pet {
     super.walk(super.name); //super.メソッド名でスーパークラスのメソッドを呼び出しましょう
     System.out.println(name + "吠える"); //"吠える"と出力しよう
   }
+
+  // スーパークラスのメソッドをオーバーライドしてみよう
+  @Override
+  public void introduction(String name) {
+    System.out.println("犬の" + name + "です。");
+  }
+
+  // メソッドをオーバーロードしてみよう
+  public void introduction(String name, int age) {
+    System.out.println("犬の" + name + "です。" + age + "才になります。");
+  }
+
 }
 
+
+class Calculator {
+  public void add(int a, int b) {
+    System.out.println(a + b);
+  }
+
+  // addメソッドをオーバーロードして、引数intをdoubleに変え、処理内容は同一の同名クラスを定義してください
+  public void add(double a, double b) {
+    System.out.println(a + b);
+  }
+}
 
     public class Java12 {         
       public static void main(String[] args) {
@@ -56,6 +85,7 @@ class Dog extends Pet {
       // インスタンスを生成し、定義したメソッドを使用してください
       Circle circle = new Circle();
       circle.getPi();
+      circle.description();
 
       circle.callSuper(); //callSuperメソッドを使用
 
@@ -67,6 +97,13 @@ class Dog extends Pet {
       dog.walkAndBark();    
       //如果，如果这里我想让walk函数输出 name+歩く，那我需要在pet.java里 public void walk(String name) {}
       //但这样的话，super.walk();就必须加上name了吧，必须加上super.walk(“ポチ”);
+      dog.introduction("ポチ");
+      dog.introduction("ポチ", 2);
+
+      // インスタンスを生成し、定義したメソッドを使用してください
+      Calculator calculator = new Calculator();
+      calculator.add(589, 230);
+      calculator.add(23.5, 52.8);
 
       }
     }
