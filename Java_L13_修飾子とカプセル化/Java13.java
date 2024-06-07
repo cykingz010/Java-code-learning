@@ -23,9 +23,9 @@ class Game {
   public static void play() {
     System.out.println("ゲームプレイ中");
   }
-
-
 }
+
+
 
     public class Java13 {         
       public static void main(String[] args) {
