@@ -15,12 +15,18 @@ interface Shape {
         Admin adminUser = new Admin();
         adminUser.login();
 
-
         Dog dog1 = new Dog();
         // 問題1. サブクラスのインスタンスをアップキャストするよう修正してください
         Animal animal = dog1;
         // 問題2. サブクラスのインスタンスをダウンキャストするよう修正してください
         Dog dog2 = (Dog) animal;
+
+        Dish dish1 = new Pasta(); //实际上没new成功，需要补充一个pasta的类，这里我们写一个继承抽象类的pasta和soup吧
+        Dish dish2 = new Soup();
+        // メソッドを呼び出すよう修正し、ポリモーフィズムを活用できるようにしてください
+        dish1.cook();
+        dish2.cook();
+
       } 
     }
     
