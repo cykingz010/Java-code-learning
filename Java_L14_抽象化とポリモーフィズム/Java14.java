@@ -9,6 +9,10 @@ interface Shape {
 
     public class Java14 {         
       public static void main(String[] args) {
+        
+        Apple apple = new Apple(100);
+        System.out.println("りんごの値段: " + apple.getPrice() + "円");
+
         Triangle triangle = new Triangle(10, 5);
         System.out.println(triangle.calcArea());
 
@@ -16,9 +20,9 @@ interface Shape {
         adminUser.login();
 
         Dog dog1 = new Dog();
-        // 問題1. サブクラスのインスタンスをアップキャストするよう修正してください
+        // アップキャストを行い、DogクラスのインスタンスをAnimal型の変数に代入しよう
         Animal animal = dog1;
-        // 問題2. サブクラスのインスタンスをダウンキャストするよう修正してください
+        // Animal型の変数に代入されたDogクラスのインスタンスを、ダウンキャストを行い、Dog型の変数に代入しよう
         Dog dog2 = (Dog) animal;
 
         Dish dish1 = new Pasta(); //实际上没new成功，需要补充一个pasta的类，这里我们写一个继承抽象类的pasta和soup吧
