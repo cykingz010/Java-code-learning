@@ -1,3 +1,4 @@
+package com.codelesson;
 public class Dog {
     private String name; // 犬の名前
     private int age; // 犬の年齢

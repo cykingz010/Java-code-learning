@@ -1,3 +1,4 @@
+package com.codelesson;
 // 問題1. 抽象クラスを宣言してください
 abstract class Fruit {
 
