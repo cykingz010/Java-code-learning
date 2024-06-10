@@ -12,12 +12,16 @@ public class Book1 {
     }
   
     public void setPrice(int price) {
-      // 価格に0未満の数値が誤って設定されないよう、setPriceメソッドを実装してください
-      this.price = price < 0 ? 0 : price;
+      // 価格に0未満の数値が誤って設定されないよう、setPriceメソッドを実装
+    }
+
+    public String setName(String name){  //自己写了一个setName
+      this.name = name;
+      return name;
     }
 
 
-    // アクセス修飾子を修正して、メソッドを外部へ公開してください
+    // アクセス修飾子を修正して、メソッドを外部へ公開
     public void displayInfo() {
       System.out.println(name + "は" + price + "円です。");
     }
