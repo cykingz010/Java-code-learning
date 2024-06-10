@@ -31,6 +31,25 @@ interface Shape {
         dish1.cook();
         dish2.cook();
 
+        Dish[] dishes = new Dish[2];
+        // スーパークラスの型の配列に、サブクラスのインスタンスを代入するよう修正してください
+        dishes[0] = new Pasta();
+        dishes[1] = new Soup();
+        // 問題2. 異なる型のインスタンスを一括で処理するよう修正してください
+        for(Dish dish : dishes) {
+          dish.cook();
+        }
+
+/*         // 問題1. 匿名クラスを宣言するよう修正してください
+        Shape circle = new Shape() {
+          @Override
+          void draw() {
+            System.out.println("円を描きます");
+          }
+        };
+        // 問題2. 匿名クラスのメソッドを利用してください
+        circle.draw();
+ */
       } 
     }
     
