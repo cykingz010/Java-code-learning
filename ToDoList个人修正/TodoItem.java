@@ -54,7 +54,14 @@ public class TodoItem {
 
     public void setDone(boolean isDone) {    // 设置todo状态
         this.isDone = isDone;
+        //this.isDone = !this.isDone;          // 更新：每次使用修改状态的功能时自动对isDone取反
+                                             // 二更新，不行，这个使用起来会和main函数里的冲突，需要新建一个方法
     }
+
+    public void changeisDone() {   // 因为上面的setDone方法有冲突，新做一个用来更改isDone状态
+        this.isDone = !this.isDone; // 切换状态
+    }
+
 }
 
 // 最初是考虑手写string直接存到main里的，但想了想总觉得很奇怪对不对……？

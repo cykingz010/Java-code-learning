@@ -44,4 +44,16 @@ public class TodoList {
             System.out.println(items[i].displayInfo());
         }
     }
+
+    // 更改当前toDo的isDone状态
+    // index用来索引数组的。定位当前是哪个todo需要改
+    public void setItemDone(int index) { 
+        if (index >= 0 && index < count) {
+            items[index].changeisDone(); // 切换状态
+            // items[index].setDone(isDone);   用这个会出问题，旧版的方法，新版修改了函数的变量
+            System.out.println("ToDoitem has been changed: " + items[index].getTitle());
+        } else {
+            System.out.println("this index is unbelievable: " + index);
+        }
+    }
 }
