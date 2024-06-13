@@ -23,12 +23,12 @@ public class TodoItem {
         // 可以用更简单的写法：String status = isDone ? "[done]" : "[doing]";
         String status;
         if (isDone) {
-            status = "[done]";
+            status = "[Status: done]";
         } else {
-            status = "[doing]";
+            status = "[Status: doing]";
         }
 
-        return title + " (期限: " + formattedDateTime + ") " + status;
+        return title + " (DueDate: " + formattedDateTime + ") " + status;
     }
 
     // Getters and setters
