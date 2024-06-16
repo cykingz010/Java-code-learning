@@ -31,10 +31,9 @@ public class TodoList {
 
         // 创建新的todo并添加到数组中
         TodoItem item = new TodoItem(title, dueDate);  // 这里搞出过小插曲：以前的定义需要同时输入isDone，现在让isDone初始为false了
-        // items[count++] = item;   说实话我觉得这个写法我很难理解过来啊
         int index = count;  // 保存当前 count 的值
         items[index] = item;  // 使用保存的 index 进行赋值
-        count++;  // 再计数，这不就有了吗？
+        count++;  // 再计数，这不就有了吗？                 ---- // items[count++] = item;   说实话我觉得这个写法我很难理解过来啊
         System.out.println("a new ToDoItem has been added : " + title);
     }
 

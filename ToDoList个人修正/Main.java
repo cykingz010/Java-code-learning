@@ -40,7 +40,7 @@ public class Main {
                     running = false;
                     break;
                 default:
-                    System.out.println("無効な選択です。");
+                    System.out.println("cheak your input num!");
                     break;
             }
         }
