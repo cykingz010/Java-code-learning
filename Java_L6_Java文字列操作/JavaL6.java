@@ -44,8 +44,44 @@ public class JavaL6 {
     word.insert(3, ",");
     System.out.println(word);
 
+
+    StringBuilder alphabet = new StringBuilder("ABCDEF");
+    final String XYZ = "XYZ";
+    // replaceメソッドを使用して、変数alphabetのDEFを定数XYZに置換して出力してください
+    alphabet.replace(3, 6, XYZ);
+    System.out.println(alphabet);
+
+    StringBuilder alphabet1 = new StringBuilder("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    //  reverseメソッドを使用して、変数alphabetの文字列を逆順にして出力してください
+    alphabet1.reverse();
+    System.out.println(alphabet1);
+
+    StringBuilder word2 = new StringBuilder("ABC");
+    // lengthメソッドを使用して、変数word2の文字数を取得して出力してください
+    System.out.println(word2.length());
+
+    StringBuilder alphabet3 = new StringBuilder("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    // 問題1. charAtメソッドを使用して、変数alphabetの3番目の文字列を取り出して出力してください
+    System.out.println(alphabet3.charAt(2));
+    // 問題2. 変数alphabetからlengthメソッドで文字数を取得して、charAtメソッドで最後の文字列を取り出して出力してください
+    System.out.println(alphabet3.charAt(alphabet3.length() - 1));
+    // 問題3. 変数alphabetから、charAtメソッドで1文字ずつ取り出してfor文で全て出力してください
+    for (int i = 0; i < alphabet3.length(); i++) {
+      System.out.println(alphabet3.charAt(i));
     }
 
+    final String POST_CODE = "1100501";
+    // 問題1. 引数にPOST_CODEを渡してStringBuilderをインスタンス化し、変数postCodeに代入してください
+    StringBuilder postCode = new StringBuilder(POST_CODE);
+    // 問題2. 変数postCodeをreverseメソッドで文字列を逆順にして出力してください
+    System.out.println(postCode.reverse());
+    // 問題3. 変数postCodeにinsertメソッドで”-”を挿入して郵便番号を作成して出力してください
+    postCode.insert(3, "-");
+    System.out.println(postCode);
+
+
   }
+
+}
 
   
