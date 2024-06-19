@@ -107,6 +107,8 @@ public class JavaL9 {
     listWithMaps1.add(map1);
     listWithMaps1.add(map2);
 
+
+
     // 問題1. 拡張for文を使用して変数mapで1つずつ取り出して、引数に 名前 を渡してgetメソッドを使用して変数nameに代入し、
     // 名前: と結合して出力してください
     for (Map<String, String> map3 : listWithMaps1) {
@@ -120,5 +122,8 @@ public class JavaL9 {
       String age = localMap.get("年");
       System.out.println("年: " + age);
     }
+
+
+    
   }
 }
