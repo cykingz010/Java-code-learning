@@ -1,6 +1,9 @@
 /* Javaではさまざまな変数の型が存在しますが、より実践的にJavaの型を学ぶレッスンです。 
 var,enum、ジェネリクスの学習を通して、システム開発におけるソースコード読解力の向上が期待できます。 */
 
+import java.util.ArrayList;
+import java.util.Random;
+
 // 列挙型を宣言してください
 enum Day {
   MONDAY("月曜日"),
@@ -31,8 +34,33 @@ enum Day {
 
 }
 
+enum Omikuji {
+  DAIKICHI("大吉"),
+  CHUKICHI("中吉"),
+  SHOKICHI("吉"),
+  KICHI("末吉"),
+  KYO("凶");
+
+  private final String fortune;
+
+  // enum型に 大吉 などの文字列を定義するため、コンストラクタを追加してください
+  Omikuji(String fortune) {
+    this.fortune = fortune;
+  }
+
+  public String getFortune() {
+    return fortune;
+  }
+}
+
 
 public class Java16 {         
+
+  public static <T> void printValue(T value) {
+    System.out.println(value);
+  }
+
+  
   public static void main(String[] args) {
     // 問題1. var変数を宣言してください
     var message = "Hello";
@@ -64,6 +92,42 @@ public class Java16 {
     // enum型の全ての値を取得するメソッドを呼び出してください
 		Day.printAllDays();
 
+
+    Omikuji result = drawFortune();
+    // enum型のメソッドを利用してください
+    System.out.println("今日の運勢は" + result.getFortune() + "です。");
+
+    ArrayList<Integer> numberList = new ArrayList<>();
+    // 問題1. ジェネリクスを使ったListに値を追加してください
+    numberList.add(100);
+
+    printValue(42);
+    // 問題2. ジェネリックメソッドを、それぞれ別な型の実引数を渡しながら2回、呼び出してください
+    printValue(3.14);
+    printValue("Hello");
+
+
+    Cart<String> shoppingCart = new Cart<>("Apple");
+    System.out.println("カートの中身: " + shoppingCart.getItem());
+    // 問題2. ジェネリッククラスに、別な型の実引数を渡し、インスタンスを生成してください
+    Cart<Integer> numberCart = new Cart<>(100);
+    System.out.println("カートの中身: " + numberCart.getItem());
   }
+
+  /**
+   * おみくじを引きます。
+   *
+   * @return おみくじ結果
+   */
+  private static Omikuji drawFortune() {
+    Random random = new Random();
+    // enum型の全ての値を取得するメソッドを呼び出してください
+    Omikuji[] omikujiValues = Omikuji.values();
+    int Index = random.nextInt(omikujiValues.length);
+
+    return omikujiValues[Index];
+  }
+
+
 }
 
