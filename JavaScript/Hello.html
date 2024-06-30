@@ -1,0 +1,36 @@
+<!D0CTYPE html>
+<html>
+    <head>
+        <title>Hello Js</title>
+    </head>
+    <body>
+        <div class="red-box" id="red-box"></div>
+
+        <style>
+            .red-box{
+                background-color: red;
+                width: 300px;
+                height: 300px
+            }
+        </style>
+
+        <script>
+            let red_box_element = document.getElementById("red-box");
+            red_box_element.onclick=()=>{
+                consale.log("我是red box,我被单击了");
+            };//单击事件的回调func
+            red_box_element.ondblclick=()=>{
+                console.log("我是red box,我被双击了");
+            };//双击事件的回调func
+            red_box_element.onmouseover =()=>{
+                console.log("我是red box,鼠标移入到我的范围内了");
+            };//鼠标移入的回调func
+            red_box_element.onmouseout=()=>{
+                console.log("我是red box,鼠标移出到我的范围内了");
+            };// 鼠标移出的回调func
+            red_box_element.onmousemove=()=>{
+                console.log("我是red box,鼠标在我的范围内移动");
+            };// 鼠标移动的回调func
+        </script>
+    </body>
+</html>
