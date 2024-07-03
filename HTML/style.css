@@ -25,4 +25,82 @@ body {
   h6 {
     font-size: 12px;
   }
-    
+
+
+  p {
+    /* 問題1. 文字を太字にしてみよう */
+    font-weight: bold;
+  }
+  
+  .red {
+    /* 問題1. 文字に色を付けてみよう */
+    color: red;
+  }
+  .blue {
+    /* 問題2. カラーコードを使って、文字の色を変えてみよう */
+    color: #3355cc;
+  }
+
+  .width {
+    /* 問題1. 四角形の横幅を変えてみよう */
+    width: 200px;
+    height: 100px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+  }
+  .height {
+    /* 問題2. 四角形の高さを変えてみよう */
+    height: 200px;
+    width: 100px;
+    border: 1px solid #000;
+  }
+  
+  div {
+    width: 100px;
+    height: 100px;
+    /* 問題1. 四角形に背景色を付けてみよう */
+    background-color: #ddffff;
+  }
+  
+  div {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .solid {
+    background-color: #ffffdd;
+    /* 問題1. 四角形の枠線を表示してみよう */
+    border: 1px solid #000;
+  }
+  .dotted {
+    background-color: #ffffdd;
+    /* 問題2. 四角形の枠線を赤色の点線で表示してみよう */
+    border: 1px dotted #ff0000;
+  }
+  
+
+  div {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .top {
+    border: 1px solid #000000;
+    /* 問題1. 四角形の内側の上に余白を入れてみよう */
+    padding-top: 20px;
+  }
+  .bottom {
+    border: 1px solid #000000;
+    /* 問題2. 四角形の内側の下に余白を入れてみよう */
+    padding-bottom: 20px;
+  }
+  .left {
+    border: 1px solid #000000;
+    /* 問題3. 四角形の内側の左に余白を入れてみよう */
+    padding-left: 20px;
+  }
+  .right {
+    border: 1px solid #000000;
+    /* 問題4. 四角形の内側の右に余白を入れてみよう */
+    padding-right: 20px;
+  }
+  
