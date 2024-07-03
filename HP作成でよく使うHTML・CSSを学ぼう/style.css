@@ -1,0 +1,20 @@
+/* h1タグの色を変更してください */
+h1 {
+    color: #b71616;
+    text-align: center;
+    /* 問題1. 文字の大きさを変更してください */
+    font-size: 50px;
+    /* 問題2. 文字の種類を変更してください */
+    font-family: serif;
+    /* 問題3. 文字の太さを変更してください */
+    font-weight: bold;
+}
+
+h2 {
+    text-align: right;
+}
+
+/* h2タグの色を一部変更してください */
+h2 span {
+    color: #357e35;
+}
