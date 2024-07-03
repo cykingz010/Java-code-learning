@@ -103,4 +103,39 @@ body {
     /* 問題4. 四角形の内側の右に余白を入れてみよう */
     padding-right: 20px;
   }
+
+  div {
+    border: 1px solid #000000;
+    width: 250px;
+    /* 問題1. 四角形の内側の上に余白を入れてみよう */
+    padding: 10px 20px 30px 40px;
+  }
+
+  div {
+    margin: 0;
+    width: 300px;
+  }
+  .box1 {
+    background: skyblue;
+    /* 問題1. 四角形の外側の左に余白を入れてみよう */
+    margin-left: 20px;
+  }
+  .box2 {
+    background: yellow;
+    /* 問題2. 四角形の外側の上に余白を入れてみよう */
+    margin-top: 20px;
+  }
+  .box3 {
+    background: red;
+    /* 問題3. 四角形の外側の下に余白を入れてみよう */
+    margin-bottom: 20px;
+  }
+  .box4 {
+    background: green;
+  }
+  .box4 span {
+    color: #000;
+    /* 問題4. テキスト「ボックス4」の右に余白を入れてみよう */
+    margin-right: 20px;
+  }
   
