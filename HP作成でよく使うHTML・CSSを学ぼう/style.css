@@ -18,3 +18,52 @@ h2 {
 h2 span {
     color: #357e35;
 }
+
+p {
+    margin: 0;
+    /* 問題1. pタグの字間を広げてください */
+    letter-spacing: 0.05em;
+    /* 問題2. pタグの行間を広げてください */
+    line-height: 1.5;
+}
+
+/* 画像の横幅と高さを指定してください */
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+
+/* div（block）高さと幅、背景色を指定してください */
+.block {
+    height: 300px;
+    width: 300px;
+    background-color: #0095d9;
+    /* 問題1. ブロックの周りにボーダーを付けてください */
+    border: 4px solid #fff;
+    /* 問題2. ブロックの周りに影を付けてください */
+    box-shadow: 0 0 6px #636363;
+    /* 問題3. ブロックの角を丸くしてください */
+    border-radius: 20px;
+}
+
+ul,
+ol {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: circle;
+}
+
+/* 3つ目のリストの黒丸を非表示にしてください */
+.list-container {
+  list-style-type: none;
+}
