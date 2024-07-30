@@ -23,7 +23,7 @@ import java.util.Scanner;
           System.out.println("Result: " + result2);
         } catch (ArithmeticException e) {
           // catchブロックで囲む
-          System.out.println("0で割ることはできません");
+          System.out.println("there is an ArithmeticException: 0で割ることはできません");
         }
         
 
@@ -38,7 +38,7 @@ import java.util.Scanner;
           // 例外処理として、スタックトレースを表示してください
           e.printStackTrace();
           // 例外処理として、例外発生の原因やメッセージを表示してください
-          System.out.println("0で割ることはできません: " + e.getMessage());
+          System.out.println("there is an ArithmeticException: 0で割ることはできません: " + e.getMessage());
         }
       
         System.setErr(System.out);
@@ -49,31 +49,49 @@ import java.util.Scanner;
           int result = number7 / number8;
           System.out.println("Result: " + result);
         } catch (ArithmeticException e) {
-          System.out.println("0で割ることはできません: " + e.getMessage());
+          System.out.println("there is an ArithmeticException: 0で割ることはできません: " + e.getMessage());
           e.printStackTrace();
         } finally {
           // 以下の命令はfinallyブロックで実行されるように囲むこと
-          System.out.println("プログラムを終了します。");
+          System.out.println("this is a finally output: プログラムを終了します。");
         }
 
           String filePath = "example.txt";
-      
+          //以下の文をtry-with-resources構文で管理する  ———— 下面注释掉的代码被扔入到try的bolck里
+          //Scanner scanner = new Scanner(new File(filePath));
+
           // try-with-resources構文を利用してexample.txtファイルが確実に閉じられるようにしてください
           try (Scanner scanner = new Scanner(new File(filePath))) {
             while (scanner.hasNextLine()) {
               System.out.println(scanner.nextLine());
             }
           } catch (FileNotFoundException e) {
-            System.out.println("ファイルが見つかりません: " + e.getMessage());
+            System.out.println("there is a FileNotFoundException: ファイルが見つかりません: " + e.getMessage());
           }
+        
+          try {
+            double result = coupon(-1);
+            System.out.println("1引いた数: " + result);
+          } catch (NegativeNumberException e) {
+            System.out.println("there is an error(custom): " + e.getMessage());
+          }  
+        
       }
-
 
         // divideメソッドで例外発生した時、スローするように修正してください
         private static void divide(int number1, int number2)
         throws ArithmeticException {
         int result = number1 / number2;
         System.out.println("Result: " + result);
+      }
+
+      // couponメソッドで例外発生した時、スローするように修正してください
+      private static double coupon(double number) throws NegativeNumberException {
+        if (number < 0) {
+          // 割引用のメソッドで、負の値が実引数に指定された場合、エラー扱いとする為に例外を発生させてください
+          throw new NegativeNumberException("負の数は計算できません");
+        }
+        return number * 0.9;
       }
 
     }
