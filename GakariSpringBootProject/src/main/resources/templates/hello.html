@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>this is html page via springboot </h1>
+	<h1 th:text="thymeleaf"></h1>
+	<h1 th:text="1"></h1>
+	<h1 th:text="${msg}"></h1>
+	
+	<ul>
+		<li th:each="name : ${hashira}">
+			<span th:text="${name}"></span>		
+		</li>
+	</ul>
+</body>
+</html>

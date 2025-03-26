@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SpringBoot 图书管理系统</title>
+</head>
+<body>
+	<!-- 标题区域 -->
+	<h1>SpringBoot 图书管理系统</h1>
+	<!-- 图书search区域 -->
+	<form method="POST" action="/book">
+		<input id="bookNameInput" name="bookName" placeholder="请输入要检索的 图书名" />
+		<input type="submit" value="检索" />
+	</form>
+	<!-- 图书列表展示区域 -->
+	<div>
+		<a th:href="@{/book/add}" target="_blank" th:text="新建图书"></a>
+	</div>
+	<ul>
+		<li th:each="book : ${books}">
+			<p>
+				<span>图书编号：</span>
+				<span th:text="${book.getBookId()}"></span>
+			</p>
+			<p>
+				<span>图书名：</span>
+				<span th:text="${book.getBookName()}"></span>
+			</p>
+			<p>
+				<span>作者名：</span>
+				<span th:text="${book.getBookAuthor()}"></span>
+			</p>
+			<a th:href="@{/book/view(bookId=${book.getId()})}" target="_blank" th:text="详情"></a>
+			<a th:href="@{/book/delete(bookId=${book.getId()})}" target="_blank" th:text="删除"></a>
+		</li> 
+		
+	</ul>
+</body>
+</html>

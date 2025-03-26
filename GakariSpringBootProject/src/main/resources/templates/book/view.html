@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>图书管理系统view</title>
+</head>
+<body>
+	<h1>图书管理系统的详情</h1>
+	<a th:href="@{/book/edit(bookId=${book.getId()})}" target="_blank" th:text="编辑"></a>
+	<p>
+		<span>图书编号：</span>
+		<span th:text="${book.getBookId()}"></span>
+	</p>
+	<p>
+		<span>图书名：</span>
+		<span th:text="${book.getBookName()}"></span>
+	</p>
+	<p>
+		<span>作者名：</span>
+		<span th:text="${book.getBookAuthor()}"></span>
+	</p>
+</body>
+</html>

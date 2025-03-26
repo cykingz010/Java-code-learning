@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SpringBoot 图书管理系统</title>
+</head>
+<body>
+	<h1>图书管理系统的新建页面</h1>
+<!-- 新建图书表单 -->
+	<form method="POST" action="/book/add">
+		<input id="bookNameInput" name="bookName" placeholder="请输入图书名" />
+		<input id="bookAuthorInput" name="bookAuthor" placeholder="请输入作者名" />
+		<input type="submit" value="创建" />
+	</form>
+</body>
+</html>

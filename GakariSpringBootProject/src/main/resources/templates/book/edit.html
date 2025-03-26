@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>图书管理系统</title>
+</head>
+<body>
+	<h1>图书管理系统的编辑</h1>
+		<!-- 新建图书表单 -->
+	<form method="POST" action="/book/edit">
+		<input id="bookId" name="bookId" th:value="${book.getId()}" hidden />
+		<input id="bookNameInput" name="bookName" placeholder="请输入图书名" th:value="${book.getBookName()}"/>
+		<input id="bookAuthorInput" name="bookAuthor" placeholder="请输入作者名" th:value="${book.getBookAuthor()}"/>
+		<input type="submit" value="更新" />
+	</form>
+</body>
+</html>
